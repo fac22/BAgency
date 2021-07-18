@@ -11,7 +11,7 @@
 #### As a potential client, I want to:
 
 - [ ] See information about each member of your team so that I can know who you are (E1)
-  - [x] Placeholder content: cat and dog
+  - [x] Placeholder content: About us (BAgency), Team (cat and dog)
 - [ ] Browse your website on mobile, tablet, and desktop devices (E3)
 - [ ] Click to navigate to different sections of your webpage (E1)
 - [ ] Visit your website at a publicly accessible domain name (E2)
