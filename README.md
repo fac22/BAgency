@@ -11,6 +11,7 @@
 #### As a potential client, I want to:
 
 - [ ] See information about each member of your team so that I can know who you are (E1)
+  - [x] Placeholder content: About us (BAgency), Team (cat and dog)
 - [ ] Browse your website on mobile, tablet, and desktop devices (E3)
 - [ ] Click to navigate to different sections of your webpage (E1)
 - [ ] Visit your website at a publicly accessible domain name (E2)
@@ -25,9 +26,8 @@
 User stories come with [acceptance criteria](https://blog.easyagile.com/how-to-write-good-user-stories-in-agile-software-development-d4b25356b604) - a detailed scope of a user’s requirements.
 
 - [ ] Navigation menu
-- [ ] ‘About us’ section
-- [ ] Images, text and external links
+- [x] ‘About us’ section
+- [x] Images, text and external links
 - [ ] Semantic HTML elements
-- [ ] Stretch Goal 
-- [ ] Use the automatic trigger functionality of your GitHub project board.
+- [x] Stretch Goal: Use the automatic trigger functionality of your **GitHub project board**.
 
