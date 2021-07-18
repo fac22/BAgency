@@ -26,9 +26,8 @@
 User stories come with [acceptance criteria](https://blog.easyagile.com/how-to-write-good-user-stories-in-agile-software-development-d4b25356b604) - a detailed scope of a user’s requirements.
 
 - [ ] Navigation menu
-- [ ] ‘About us’ section
-- [ ] Images, text and external links
+- [x] ‘About us’ section
+- [x] Images, text and external links
 - [ ] Semantic HTML elements
-- [ ] Stretch Goal 
-- [ ] Use the automatic trigger functionality of your GitHub project board.
+- [x] Stretch Goal: Use the automatic trigger functionality of your **GitHub project board**.
 
