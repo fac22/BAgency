@@ -15,6 +15,17 @@
     <header class="header">
         <nav class="navbar">
             <span class="nav__logo">BAgency</span>
+
+            <!--Toggle Dark Mode, can go elsewhere-->
+            <div class="switch-container">
+                <span class="switch">
+                    <input type="checkbox" id="checkbox-dark-mode">
+                    <span class="slider"></span>
+                </span>
+                <label class="text--large" for="checkbox-dark-mode">To Dark Mode</label>
+            </div>
+
+            <!--Nav Links-->
             <ul class="nav__links">
                 <!-- <li class="nav__item">
                     <a class="nav__link" href="#chapter-intro">Intro</a>
@@ -34,7 +45,7 @@
             <h1><span class="text-bagency">BAgency</span> motto .Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit,
                 sed do eiusmod tempor</h1>
-            <button class="btn--text btn--find-out-more">Find out more...</button>
+            <button class="btn--text btn--find-out-more link--clickable">Find out more...</button>
             <img src="img/bagency-team.jpeg" class="header__img" alt="The BAgency team" />
         </div>
     </header>
