@@ -31,3 +31,6 @@ User stories come with [acceptance criteria](https://blog.easyagile.com/how-to-w
 - [ ] Semantic HTML elements
 - [x] Stretch Goal: Use the automatic trigger functionality of your **GitHub project board**.
 
+
+### Bonus (time permitting)
+- [ ] Colours, Dark Mode
