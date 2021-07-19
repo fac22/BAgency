@@ -7,35 +7,35 @@ const navbar = document.querySelector('.navbar');
 
 // Button FIND OUT MORE
 btnFindOutMore.addEventListener("click", function (e) {
-    sectionAbout.scrollIntoView({ behavior: "smooth" });
-  });
+  sectionAbout.scrollIntoView({ behavior: "smooth" });
+});
 
 
 // Page navigation
 document.querySelector(".nav__links").addEventListener("click", function (e) {
-    e.preventDefault();
-    if (e.target.classList.contains("nav__link")) {
-      const id = e.target.getAttribute("href");
-      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-    }
-  });
+  e.preventDefault();
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
 
 
 // Navbar fade animation
 const handleHover = function (e) {
-    if (e.target.classList.contains("nav__link")) {
-      const link = e.target;
-      const siblings = link.closest(".navbar").querySelectorAll(".nav__link");
-      const logo = link.closest(".navbar").querySelector(".nav__logo");
-  
-      siblings.forEach((el) => {
-        if (el !== link) el.style.opacity = this;
-      });
-      logo.style.opacity = this;
-    }
-  };
-  navbar.addEventListener("mouseover", handleHover.bind(0.5));
-  navbar.addEventListener("mouseout", handleHover.bind(1));
+  if (e.target.classList.contains("nav__link")) {
+    const link = e.target;
+    const siblings = link.closest(".navbar").querySelectorAll(".nav__link");
+    const logo = link.closest(".navbar").querySelector(".nav__logo");
+
+    siblings.forEach((el) => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+navbar.addEventListener("mouseover", handleHover.bind(0.5));
+navbar.addEventListener("mouseout", handleHover.bind(1));
 
 
 // Sticky navigation
@@ -53,3 +53,22 @@ const headerObserver = new IntersectionObserver(stickyNavigation, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+
+//Toggle Dark Mode
+const body = document.documentElement;
+const darkButton = document.querySelector("#dark-mode-checkbox");
+const darkLabel = document.querySelector("#dark-mode-label");
+
+function switchDark(e) {
+  if (e.target.checked) {
+    body.classList.add("dark");
+    darkLabel.textContent = "To Light Mode";
+  } else {
+    body.classList.remove("dark");
+    darkLabel.textContent = "To Dark Mode";
+  }
+}
+
+darkButton.addEventListener("change", switchDark);
+
