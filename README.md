@@ -1,6 +1,6 @@
 # BAgency
 ## This is Barbara and Adriana's agency website.
-
+It is hosted on https://fac22.github.io/BAgency/
 
 #### Our website should give potential clients:
 * An introduction to your agency
