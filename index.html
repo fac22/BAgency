@@ -12,16 +12,33 @@
 
 <body>
 
-    <header>
-        <h1>BAgency</h1>
-        <nav>
-            <ul>
-                <li><a href="#chapter-intro">Intro</a></li>
-                <li><a href="#chapter-about">About us</a></li>
-                <li><a href="#chapter-team">Team</a></li>
-                <li><a href="#chapter-contact">Contact</a></li>
+    <header class="header">
+        <nav class="navbar">
+            <span class="nav__logo">BAgency</span>
+            <ul class="nav__links">
+                <!-- <li class="nav__item">
+                    <a class="nav__link" href="#chapter-intro">Intro</a>
+                </li> -->
+                <li class="nav__item">
+                    <a class="nav__link" href="#chapter-about">About us</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#chapter-team">Our team</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#chapter-contact">Contact us</a>
+                </li>
             </ul>
         </nav>
+        <div class="header__text">
+            <h1> BAgency motto .Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h1>
+            <button class="btn--text btn--find-out-more">Find out more...</button>
+            <img
+                src="img/bagency-team.jpeg"
+                class="header__img"
+                alt="The BAgency team"
+            />
+        </div>
     </header>
 
     <main>
@@ -33,20 +50,21 @@
 
         <!--
         -->
-        <section id="chapter-about">
-            <h2>About BAgency</h2>
-            <h3>Providing solutions</h3>
-            <p>We solve the needs in your home!</p>
+        <section class="section" id="chapter-about">
+            <div>
+                <h2>About BAgency</h2>
+                <h3>Providing solutions</h3>
+                <p>We solve the needs in your home!</p>
 
-            <h3>Reliable partner</h3>
-            <p>We support you every step of the way!</p>
+                <h3>Reliable partner</h3>
+                <p>We support you every step of the way!</p>
 
-            <h3>Trusted by our customers</h3>
-            <p>We have been operating since 2015 and continue to grow!</p>
-
+                <h3>Trusted by our customers</h3>
+                <p>We have been operating since 2015 and continue to grow!</p>
+            </div>
         </section>
 
-        <section id="chapter-team">
+        <section class="section" id="chapter-team">
             <h2>Meet our dedicated team</h2>
 
             <article>
@@ -83,7 +101,21 @@
     </main>
 
 
-    <footer>
+    <footer class="footer">
+        <ul class="footer__navbar">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Intro</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#chapter-about">About us</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#chapter-team">Team</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#chapter-contact">Contact</a>
+            </li>
+          </ul>
         <p>&#169; 2021 BAgency</p>
     </footer>
 
