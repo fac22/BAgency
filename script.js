@@ -1,51 +1,47 @@
 'use strict';
 
-const btnFindOutMore = document.querySelector(".btn--find-out-more");
-const sectionAbout = document.querySelector("#chapter-about");
+const btnFindOutMore = document.querySelector('.btn--find-out-more');
+const sectionAbout = document.querySelector('#chapter-about');
 const navbar = document.querySelector('.navbar');
 
-
 // Button FIND OUT MORE
-btnFindOutMore.addEventListener("click", function (e) {
-  sectionAbout.scrollIntoView({ behavior: "smooth" });
+btnFindOutMore.addEventListener('click', function (e) {
+  sectionAbout.scrollIntoView({ behavior: 'smooth' });
 });
 
-
 // Page navigation
-document.querySelector(".nav__links").addEventListener("click", function (e) {
+document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
-  if (e.target.classList.contains("nav__link")) {
-    const id = e.target.getAttribute("href");
-    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
 
-
 // Navbar fade animation
 const handleHover = function (e) {
-  if (e.target.classList.contains("nav__link")) {
+  if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    const siblings = link.closest(".navbar").querySelectorAll(".nav__link");
-    const logo = link.closest(".navbar").querySelector(".nav__logo");
+    const siblings = link.closest('.navbar').querySelectorAll('.nav__link');
+    const logo = link.closest('.navbar').querySelector('.nav__logo');
 
-    siblings.forEach((el) => {
+    siblings.forEach(el => {
       if (el !== link) el.style.opacity = this;
     });
     logo.style.opacity = this;
   }
 };
-navbar.addEventListener("mouseover", handleHover.bind(0.5));
-navbar.addEventListener("mouseout", handleHover.bind(1));
-
+navbar.addEventListener('mouseover', handleHover.bind(0.5));
+navbar.addEventListener('mouseout', handleHover.bind(1));
 
 // Sticky navigation
 const stickyNavigation = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) navbar.classList.add("sticky");
-  else navbar.classList.remove("sticky");
+  if (!entry.isIntersecting) navbar.classList.add('sticky');
+  else navbar.classList.remove('sticky');
 };
 
-const header = document.querySelector(".header");
+const header = document.querySelector('.header');
 const navHeight = navbar.getBoundingClientRect().height;
 const headerObserver = new IntersectionObserver(stickyNavigation, {
   root: null,
@@ -54,21 +50,30 @@ const headerObserver = new IntersectionObserver(stickyNavigation, {
 });
 headerObserver.observe(header);
 
-
 //Toggle Dark Mode
 const body = document.documentElement;
-const darkButton = document.querySelector("#dark-mode-checkbox");
-const darkLabel = document.querySelector("#dark-mode-label");
+const darkSwitch = document.querySelector('#dark-mode-switch');
+const darkButton = document.querySelector('#dark-mode-checkbox');
+const darkLabel = document.querySelector('#dark-mode-label');
+
+function switchOutlineOn(e) {
+  darkSwitch.style.outline = '1px dotted red';
+}
+
+function switchOutlineOff(e) {
+  darkSwitch.style.outline = '0';
+}
 
 function switchDark(e) {
   if (e.target.checked) {
-    body.classList.add("dark");
-    darkLabel.textContent = "To Light Mode";
+    body.classList.add('dark');
+    darkLabel.textContent = 'To Light Mode';
   } else {
-    body.classList.remove("dark");
-    darkLabel.textContent = "To Dark Mode";
+    body.classList.remove('dark');
+    darkLabel.textContent = 'To Dark Mode';
   }
 }
 
-darkButton.addEventListener("change", switchDark);
-
+darkButton.addEventListener('focus', switchOutlineOn);
+darkButton.addEventListener('focusout', switchOutlineOff);
+darkButton.addEventListener('change', switchDark);

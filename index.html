@@ -16,15 +16,7 @@
         <nav class="navbar">
             <a class="nav__logo" href="#">BAgency</a>
 
-            <!--Toggle Dark Mode, can go elsewhere-->
-            <div class="switch-container">
-                <span class="switch">
-                    <input type="checkbox" id="dark-mode-checkbox">
-                    <span class="slider"></span>
-                </span>
-                <label class="text--large" id="dark-mode-label" for="checkbox-dark-mode">To Dark Mode</label>
-            </div>
-
+  
             <!--Nav Links-->
             <ul id="navbar-links" class="nav__links">
                 <!-- <li class="nav__item">
@@ -42,15 +34,14 @@
             </ul>
         </nav>
         <div class="header__text">
-            <h1><span class="text-bagency">BAgency</span> motto .Lorem ipsum dolor sit amet, consectetur adipiscing
+            <h1 tabindex="0"><span class="text-bagency">BAgency</span> motto .Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit,
                 sed do eiusmod tempor</h1>
             <button class="btn--text btn--find-out-more link--clickable">Find out more...</button>
             <img 
             class="header__img" 
             src="img/bagency-team.jpeg" 
-            alt="The BAgency team" 
-            tabindex="0" />
+            alt="The BAgency team"/>
         </div>
     </header>
 
@@ -114,7 +105,16 @@
     </main>
 
 
-    <footer class="footer" tabindex="0">
+    <footer class="footer">
+        <!--Toggle Dark Mode, can go elsewhere in this HTML-->
+        <div class="switch-container">
+            <span class="switch" id="dark-mode-switch">
+                <input type="checkbox" id="dark-mode-checkbox" tabindex="0">
+                <span class="slider"></span>
+            </span>
+            <label class="text--large" id="dark-mode-label" for="checkbox-dark-mode">To Dark Mode</label>
+        </div>
+
         <ul class="footer__navbar">
             <li class="footer__item">
                 <a class="footer__link" href="#">Intro</a>
