@@ -53,17 +53,17 @@ const headerObserver = new IntersectionObserver(stickyNavigation, {
 });
 headerObserver.observe(header);
 
-//Toggle Dark Mode
+// Toggle Dark Mode
 const body = document.documentElement;
 const darkSwitch = document.querySelector('#dark-mode-switch');
 const darkButton = document.querySelector('#dark-mode-checkbox');
 const darkLabel = document.querySelector('#dark-mode-label');
 
-function switchOutlineOn(e) {
+function switchOutlineOn() {
   darkSwitch.style.outline = '1px dotted red';
 }
 
-function switchOutlineOff(e) {
+function switchOutlineOff() {
   darkSwitch.style.outline = '0';
 }
 
