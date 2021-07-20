@@ -156,6 +156,7 @@ h4 {
   border-radius: 50%;
 }
 
+/*Not necessary anymore?*/
 .text--large {
   font-size: 1.7rem;
   font-weight: 400;
@@ -165,6 +166,7 @@ h4 {
   color: var(--color-accent);
   font-weight: bold;
 }
+/*Not necessary anymore?*/
 
 .link--clickable {
   color: var(--color-link);

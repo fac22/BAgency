@@ -1,0 +1,27 @@
+{
+  "name": "bagency",
+  "version": "1.0.0",
+  "description": "This is Barbara and Adriana's agency website.",
+  "main": "script.js",
+  "scripts": {
+    "eslint": "npx eslint script.js",
+    "prettier": "npx prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac22/BAgency.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac22/BAgency/issues"
+  },
+  "homepage": "https://github.com/fac22/BAgency#readme",
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "prettier": "2.3.2"
+  }
+}
