@@ -6,16 +6,17 @@
   --color-background: #ede9fc;
   --color-nav: rgba(255, 255, 255, 0.95);
   --color-accent: #6847ec;
-  --color-link: #6847ec;
+  --color-link: #6847ec; /*I don't know if we want to do 1 or 2 special font colors?*/
 }
 
 .dark {
   --color-background: #121212;
   --color-lines: #fff;
   --color-nav: #444;
+  --color-accent: #d400d4;
+  --color-link: #d400d4;
   /*
   --color-lines-sections: ;
-  --color-accent: ;
   */
 }
 
