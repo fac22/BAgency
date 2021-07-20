@@ -33,3 +33,10 @@ User stories come with [acceptance criteria](https://blog.easyagile.com/how-to-w
 - [x] Images, text and external links
 - [ ] Semantic HTML elements
 - [x] Stretch Goal: Use the automatic trigger functionality of your **GitHub project board**.
+<<<<<<< HEAD
+
+
+### Bonus (time permitting)
+- [ ] Colours, Dark Mode
+=======
+>>>>>>> main

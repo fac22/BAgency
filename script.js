@@ -52,3 +52,31 @@ const headerObserver = new IntersectionObserver(stickyNavigation, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+//Toggle Dark Mode
+const body = document.documentElement;
+const darkSwitch = document.querySelector('#dark-mode-switch');
+const darkButton = document.querySelector('#dark-mode-checkbox');
+const darkLabel = document.querySelector('#dark-mode-label');
+
+function switchOutlineOn(e) {
+  darkSwitch.style.outline = '1px dotted red';
+}
+
+function switchOutlineOff(e) {
+  darkSwitch.style.outline = '0';
+}
+
+function switchDark(e) {
+  if (e.target.checked) {
+    body.classList.add('dark');
+    darkLabel.textContent = 'To Light Mode';
+  } else {
+    body.classList.remove('dark');
+    darkLabel.textContent = 'To Dark Mode';
+  }
+}
+
+darkButton.addEventListener('focus', switchOutlineOn);
+darkButton.addEventListener('focusout', switchOutlineOff);
+darkButton.addEventListener('change', switchDark);

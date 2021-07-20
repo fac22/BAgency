@@ -29,17 +29,16 @@
         </ul>
       </nav>
       <div class="header__text">
-        <h1>
-          BAgency motto .Lorem ipsum dolor sit amet, consectetur adipiscing
+        <h1 tabindex="0">
+          <span class="text-bagency">BAgency motto</span> .Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor
         </h1>
         <img
           src="img/bagency-team.jpeg"
           class="header__img"
           alt="The BAgency team"
-          tabindex="0"
         />
-        <button class="btn--text btn--find-out-more">Find out more...</button>
+        <button class="btn--text btn--find-out-more link--clickable">Find out more...</button>
       </div>
     </header>
 
@@ -54,7 +53,7 @@
         -->
       <section class="section" id="chapter-about" tabindex="0">
         <div>
-          <h2>About BAgency</h2>
+          <h2>About <span class="text-bagency">BAgency</span></h2>
           <h3>Providing solutions</h3>
           <p>We solve the needs in your home!</p>
 
@@ -75,7 +74,7 @@
           <img
             class="img__profile"
             src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-            alt="White-black, furry cat with butterfly on her nose"
+            alt="Image of cat, white-black fur, with butterfly on her nose"
           />
           <p>Trained at the Scratch Tree, London</p>
           <p>Expert companion, climber and mouse catcher</p>
@@ -88,7 +87,7 @@
           <img
             class="img__profile"
             src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-            alt="Golden Retriever dog holding a yellow tulip in its mouth"
+            alt="Image of dog, Golden Retriever, holding a yellow tulip in its mouth"
           />
           <p>Dog School Graduate, Class of 2021</p>
           <p>Expert companion, walker and protector</p>
@@ -103,22 +102,32 @@
         -->
     </main>
 
-    <footer class="footer" tabindex="0">
-      <ul class="footer__navbar">
-        <li class="footer__item">
-          <a class="footer__link" href="#">Intro</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#chapter-about">About us</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#chapter-team">Team</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#chapter-contact">Contact</a>
-        </li>
-      </ul>
-      <p>&#169; 2021 BAgency</p>
+
+    <footer class="footer">
+        <!--Toggle Dark Mode, can go elsewhere in this HTML-->
+        <div class="switch-container">
+            <span class="switch" id="dark-mode-switch">
+                <input type="checkbox" id="dark-mode-checkbox" tabindex="0">
+                <span class="slider"></span>
+            </span>
+            <label class="text--large" id="dark-mode-label" for="checkbox-dark-mode">To Dark Mode</label>
+        </div>
+
+        <ul class="footer__navbar">
+            <li class="footer__item">
+                <a class="footer__link" href="#">Intro</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="#chapter-about">About us</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="#chapter-team">Team</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="#chapter-contact">Contact</a>
+            </li>
+        </ul>
+        <p>&#169; 2021 <span class="text-bagency">BAgency</span></p>
     </footer>
   </body>
 </html>
