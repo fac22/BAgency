@@ -20,7 +20,7 @@ body {
   font-weight: 300;
   color: #444;
   line-height: 1.9;
-  background-color: #ede9fc
+  background-color: #ede9fc;
 }
 
 /* NAVIGATION*/
@@ -33,7 +33,6 @@ body {
   width: 100%;
   padding: 0 6rem;
   z-index: 100;
-  
 }
 
 .navbar.sticky {
@@ -141,7 +140,6 @@ h4 {
   border-radius: 50%;
 }
 
-
 /* FOOTER */
 .footer {
   border-top: 1px solid var(--color-lines);
@@ -163,7 +161,7 @@ h4 {
 .footer__link {
   font-size: 1.6rem;
   text-decoration: none;
-  color: var(--color-lines)
+  color: var(--color-lines);
 }
 
 @media only screen and (max-width: 768px) {
@@ -224,4 +222,3 @@ h4 {
     padding: 6rem 2rem;
   }
 }
-
