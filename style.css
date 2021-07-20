@@ -49,7 +49,6 @@ body {
   width: 100%;
   padding: 0 6rem;
   z-index: 100;
-  
 }
 
 .navbar.sticky {
@@ -68,6 +67,9 @@ body {
   vertical-align: middle;
 }
 
+.nab__mobile-toggle {
+  visibility: hidden;
+}
 
 .nav__links {
   display: flex;
@@ -87,6 +89,64 @@ body {
   text-decoration: none;
   display: block;
   transition: all 0.3s;
+}
+
+/*Toggle Switch*/
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch {
+  background: none;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  margin-right: 0.5em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.slider {
+  background: var(--color-lines-sections);
+  /*width: 100%;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 35px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.slider:before {
+  /*actual button*/
+  content: '';
+  background-color: var(--color-accent);
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+/*Toggle after click*/
+input:checked + .slider {
+} /*could change toggle-color on click*/
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 /* HEADER */
@@ -189,63 +249,64 @@ h4 {
 .footer__link {
   font-size: 1.6rem;
   text-decoration: none;
-  color: var(--color-lines)
+  color: var(--color-lines);
 }
 
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0;
+    position: fixed;
+  }
 
+  .nav__item {
+    margin-left: 1rem;
+  }
 
-/*Toggle Switch*/
-.switch-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  .nav__logo {
+    height: 6rem;
+    font-size: 3rem;
+  }
 
-.switch {
-  background: none;
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 35px;
-  margin-right: 0.5em;
-}
+  .nav__link:link,
+  .nav__link:visited {
+    font-size: 4vw;
+  }
 
-.switch input {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  pointer-events: all;
-}
+  h1 {
+    font-size: 7.5vw;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    padding-bottom: 1rem;
+  }
 
-.slider {
-  background: var(--color-lines-sections);
-  /*width: 100%;*/
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-radius: 35px;
-  pointer-events: none;
-  transition: 0.5s;
-}
+  .header__text {
+    row-gap: 0;
+  }
 
-.slider:before { /*actual button*/
-  content: "";
-  background-color: var(--color-accent);
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  bottom: 4px;
-  left: 4px;
-  border-radius: 50%;
-  pointer-events: none;
-  transition: 0.2s;
-}
+  .header__img {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    place-self: center;
+  }
 
-/*Toggle after click*/
-input:checked + .slider {} /*could change toggle-color on click*/
-input:checked + .slider:before {
-  transform: translateX(26px);
+  .btn--text {
+    font-size: 4vw;
+  }
+
+  .section {
+    padding: 10rem 3rem;
+  }
+
+  .footer__link {
+    font-size: 3.7vw;
+  }
+
+  .footer__item {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .footer {
+    padding: 6rem 2rem;
+  }
 }
