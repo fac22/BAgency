@@ -14,11 +14,11 @@ It is hosted on https://fac22.github.io/BAgency/
   - [x] Placeholder content: About us (BAgency), Our team (cat and dog)
 - [ ] Browse your website on mobile, tablet, and desktop devices (E3)
 - [x] Click to navigate to different sections of your webpage (E1)
-- [ ] Visit your website at a publicly accessible domain name (E2)
+- [x] Visit your website at a publicly accessible domain name (E2)
 
 #### Additionally, as a visually impaired user, I want to:
 
-- [ ] Navigate your website using keyboard controls (E2)
+- [x] Navigate your website using keyboard controls (E2)
 - [ ] Hear my screen reader describe the content on your website (E1)
 
 
