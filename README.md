@@ -1,12 +1,15 @@
 # BAgency
+
 ## This is Barbara and Adriana's agency website.
+
 It is hosted on https://fac22.github.io/BAgency/
 
 #### Our website should give potential clients:
-* An introduction to your agency
-* Information about each member of your team
 
-### User Stories 
+- An introduction to your agency
+- Information about each member of your team
+
+### User Stories
 
 #### As a potential client, I want to:
 
@@ -21,8 +24,8 @@ It is hosted on https://fac22.github.io/BAgency/
 - [x] Navigate your website using keyboard controls (E2)
 - [ ] Hear my screen reader describe the content on your website (E1)
 
+### Acceptance Criteria
 
-### Acceptance Criteria 
 User stories come with [acceptance criteria](https://blog.easyagile.com/how-to-write-good-user-stories-in-agile-software-development-d4b25356b604) - a detailed scope of a user’s requirements.
 
 - [x] Navigation menu
@@ -30,4 +33,3 @@ User stories come with [acceptance criteria](https://blog.easyagile.com/how-to-w
 - [x] Images, text and external links
 - [ ] Semantic HTML elements
 - [x] Stretch Goal: Use the automatic trigger functionality of your **GitHub project board**.
-
