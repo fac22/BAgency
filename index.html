@@ -28,7 +28,7 @@
               class="nav__link nav__link--btn btn--open-modal"
               href="#chapter-contact"
             >
-              Contact us
+              Work form
             </a>
           </li>
         </ul>
@@ -134,7 +134,7 @@
         </li>
         <li class="footer__item">
           <a class="footer__link btn--open-modal" href="#chapter-contact"
-            >Contact</a
+            >Work form</a
           >
         </li>
       </ul>
@@ -143,17 +143,22 @@
 
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">Contact us</h2>
+      <h2 class="modal__header">Work form</h2>
       <form class="modal__form">
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" />
-        <label>Message:</label>
-        <input type="textarea" />
+        <label>Name</label>
+        <input type="text" placeholder="Name or Company Name" />
         <label>Email Address</label>
-        <input type="email" />
-        <button class="btn">Send</button>
+        <input type="email" placeholder="Valid Email Address" />
+        <label>Message:</label>
+        <textarea
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Enter Description about Request (maximum length 300 characters)"
+        ></textarea>
+        <label>Please type: I'm not a robot.</label>
+        <textarea id="roboy" placeholder="I'm not a robot"></textarea>
+        <button class="btn">Send form</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
