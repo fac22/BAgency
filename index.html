@@ -144,21 +144,61 @@
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">Work form</h2>
-      <form class="modal__form">
+      <span id="work-form-results" class="hidden">&nbsp;</span>
+      <form
+        name="work-form"
+        id="work-form"
+        class="modal__form"
+      >
         <label>Name</label>
-        <input type="text" placeholder="Name or Company Name" />
+        <input
+          name="Name"
+          type="text"
+          id="work-form-name"
+          placeholder="Name or Company Name"
+          data-valid="false"
+        />
+        <span>&nbsp;</span>
+        <span id="work-form-name-error" class="modal__form_error hidden">
+          You need to provide a name
+        </span>
         <label>Email Address</label>
-        <input type="email" placeholder="Valid Email Address" />
-        <label>Message:</label>
+        <input
+          name="Email Address"
+          type="email"
+          id="work-form-email"
+          placeholder="Valid Email Address"
+          data-valid="false"
+        />
+        <span>&nbsp;</span>
+        <span id="work-form-email-error" class="modal__form_error hidden">
+          You need to provide a valid Email Address
+        </span>
+        <label>Message</label>
         <textarea
-          id="message"
+          name="Message"
+          id="work-form-message"
           cols="30"
           rows="10"
-          placeholder="Enter Description about Request (maximum length 300 characters)"
+          placeholder="Enter Description about Request (maximum length 149 characters)"
+          data-valid="false"
         ></textarea>
-        <label>Please type: I'm not a robot.</label>
-        <textarea id="roboy" placeholder="I'm not a robot"></textarea>
-        <button class="btn">Send form</button>
+        <span>&nbsp;</span>
+        <span id="work-form-message-error" class="modal__form_error hidden">
+          You need to provide a message between 1 and 149 characters
+        </span>
+        <label>Please type<br />"I'm not a robot"</label>
+        <input
+          type="text"
+          id="work-form-robot"
+          placeholder="I'm not a robot"
+          data-valid="false"
+        ></input>
+        <span>&nbsp;</span>
+        <span id="work-form-robot-error" class="modal__form_error hidden">
+          You need to type "I'm not a robot"
+        </span>
+        <button id="work-form-send" type="button" class="btn">Send form</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
