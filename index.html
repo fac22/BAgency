@@ -31,6 +31,7 @@
               Work form
             </a>
           </li>
+          <!-- <li class="nav__item"><a class="nav__link nav__link--btn btn--open-modal" href="#chapter-team-add">Add staff</a></li> -->
         </ul>
       </nav>
       <div class="header__text">
@@ -110,6 +111,40 @@
             <p></p>
           </article>
         </template>
+
+        <h2>We are always adding new members to our team</h2>
+        <form name="team-form" id="team-form" class="modal__form">
+<label for="team-form-name">Name</label>
+<input name="Staff Name" type="text" id="team-form-name" placeholder="Employee Name" data-valid="false" required>
+<span>&nbsp;</span>
+<span id="team-form-name-error" class="modal__form_error hidden">You need to provide a name</span>
+
+<label for="team-form-email">Email Address</label>
+<input name="Staff Email Adress" type="email" id="team-form-email" placeholder="Employee Email Address" data-valid="false" required>
+<span>&nbsp;</span>
+<span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid Email Address</span>
+
+<label for="team-form-title">Job Title</label>
+<input name="Staff Title" type="text" id="team-form-title" placeholder="New Team Role Title" data-valid="false" required>
+<span>&nbsp;</span>
+<span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid the Role Title</span>
+
+<label for="team-form-descr">Description</label>
+<textarea name="Staff Description" id="team-form-descr" placeholder="Describe the role of the new team member (max 149 characters)" data-valid="false" required></textarea>
+<span>&nbsp;</span>
+<span id="work-form-message-error" class="modal__form_error hidden">You need to provide a message between 1 and 149 characters</span>
+
+<label for="team-form-img">Profile Image</label>
+<input name="Staff Image" type="text" id="team-form-img" placeholder="Insert URL">
+
+<label for="team-form-pass">Admin Password</label>
+<input name="Admin Password" type="password" id="team-form-pass" placeholder="Enter Admin Password" data-valid="false" required>
+<span>&nbsp;</span>
+<span id="work-form-message-error" class="modal__form_error hidden">Incorrect Admin Password</span>
+
+<button id="team-form-submit" type="button" class="btn">Submit</button>
+
+        </form>
       </section>
 
       <!--
