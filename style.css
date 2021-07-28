@@ -369,6 +369,12 @@ input:checked + .slider:before {
   background: none;
 }
 
+.required, .error {
+  color: red;
+  /* vertical-align: super; */
+  font-style: italic;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;

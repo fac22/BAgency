@@ -114,6 +114,87 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+//Team Form
+//Team Form inputs
+const teamAddName = document.querySelector('#team-form-name');
+const teamAddEmail = document.querySelector('#team-form-email');
+const teamAddTitle = document.querySelector('#team-form-title');
+const teamAddDesc = document.querySelector('#team-form-desc');
+const teamAddImg = document.querySelector('#team-form-img');
+const teamAddPass = document.querySelector('#team-form-pass');
+const teamAddSubmit = document.querySelector('#team-form-submit');
+//Team Form password
+const adminPasswordBAgency = '1234';
+const teamAddPassLabelError = document.querySelector(
+  '[for="team-form-pass"] .error'
+);
+//Team Form 149
+const teamAddDescLabel = document.querySelector('[for="team-add-desc"]');
+const teamAddDescLabelError = document.querySelector(
+  '[for="team-form-desc"] .error'
+);
+
+function passwordChecker(field, correct, display) {
+  const check = field.value === correct;
+  if (!check) {
+    display.textContent = ' Incorrect Password';
+  } else {
+    display.textContent = '';
+  }
+}
+
+function textLengthChecker(field, max, display) {
+  if (field.textLength > max) {
+    field.setAttribute('aria-invalid', 'true');
+    let test = /Exceeds/.test(display.textContent);
+    if (!test) {
+      display.textContent = ' Exceeds 149 characters';
+    }
+  } else {
+    field.setAttribute('aria-invalid', 'false');
+    display.textContent = '';
+  }
+}
+
+function imgHelper(a) {
+  let help = 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
+  return a.value === '' ? help : a.value;
+}
+
+function addTeamGatherInfo() {
+  const addName = teamAddName.value;
+  const addTitle = teamAddTitle.value;
+  const addDesc = teamAddDesc.value;
+  const addImg = addTeamImgHelper(teamAddImg);
+  return { addName, addTitle, addDesc, addImg };
+}
+
+function addTeamFillTemplate() {
+  //define target, template, clone
+  const target = document.querySelector('#chapter-team');
+  const template = document.querySelector('#new-team-card');
+  const tempClone = template.content.cloneNode(true);
+  //take object, access each key
+  const formInfo = addTeamGatherInfo();
+  //assign key-->template tags
+  tempClone.querySelector('h3').textContent = formInfo.addName;
+  tempClone.querySelector('h4').textContent = formInfo.addTitle;
+  tempClone.querySelector('p').textContent = formInfo.addDesc;
+  tempClone.querySelector('img').src =
+    'https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
+  return target.appendChild(tempClone);
+}
+
+teamAddDesc.addEventListener('input', () => {
+  textLengthChecker(teamAddDesc, 149, teamAddDescLabelError);
+});
+
+teamAddSubmit.addEventListener('click', () => {
+  passwordChecker(teamAddPass, adminPasswordBAgency, teamAddPassLabelError);
+  // addTeamGatherInfo();
+  addTeamFillTemplate();
+});
+
 // Button FIND OUT MORE
 btnFindOutMore.addEventListener('click', () => {
   sectionAbout.scrollIntoView({ behavior: 'smooth' });
