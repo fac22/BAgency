@@ -10,6 +10,87 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--open-modal');
 
+// eslint-disable-next-line no-unused-vars
+const sendForm = () => {
+  const formElements = Array.from(document.forms['work-form'].elements).filter(
+    (element) => element.hasAttribute('data-valid')
+  );
+
+  formElements.forEach((element) => {
+    if (element.getAttribute('data-valid') === 'false') {
+      document.getElementById(`${element.id}-error`).classList.remove('hidden');
+    } else {
+      document.getElementById(`${element.id}-error`).classList.add('hidden');
+    }
+  });
+
+  if (
+    !formElements.filter(
+      (element) => element.getAttribute('data-valid') === 'false'
+    ).length
+  ) {
+    document.forms['work-form'].classList.add('removed');
+    document.getElementById('work-form-results').innerHTML = formElements
+      .filter((element) => element.hasAttribute('name'))
+      .reduce(
+        (html, element) =>
+          `${html} ${element.getAttribute('name')}: ${element.value} <br />`,
+        ''
+      );
+    document.getElementById('work-form-results').classList.remove('hidden');
+  }
+};
+
+document.getElementById('work-form-name').addEventListener('input', (e) => {
+  if (!e.target.value.length) {
+    e.target.style.borderColor = 'red';
+    e.target.setAttribute('data-valid', false);
+  } else {
+    e.target.style.borderColor = 'green';
+    e.target.setAttribute('data-valid', true);
+    document.getElementById(`${e.target.id}-error`).classList.add('hidden');
+  }
+});
+
+document.getElementById('work-form-email').addEventListener('input', (e) => {
+  if (
+    !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+      e.target.value
+    )
+  ) {
+    e.target.style.borderColor = 'red';
+    e.target.setAttribute('data-valid', false);
+  } else {
+    e.target.style.borderColor = 'green';
+    e.target.setAttribute('data-valid', true);
+    document.getElementById(`${e.target.id}-error`).classList.add('hidden');
+  }
+});
+
+document.getElementById('work-form-message').addEventListener('input', (e) => {
+  if (e.target.value.length >= 149 || !e.target.value.length) {
+    e.target.style.borderColor = 'red';
+    e.target.setAttribute('data-valid', false);
+  } else {
+    e.target.style.borderColor = 'green';
+    e.target.setAttribute('data-valid', true);
+    document.getElementById(`${e.target.id}-error`).classList.add('hidden');
+  }
+});
+
+document.getElementById('work-form-robot').addEventListener('input', (e) => {
+  if (e.target.value !== "I'm not a robot") {
+    e.target.style.borderColor = 'red';
+    e.target.setAttribute('data-valid', false);
+  } else {
+    e.target.style.borderColor = 'green';
+    e.target.setAttribute('data-valid', true);
+    document.getElementById(`${e.target.id}-error`).classList.add('hidden');
+  }
+});
+
+document.getElementById('work-form-send').addEventListener('click', sendForm);
+
 // Modal window
 const openModal = (e) => {
   e.preventDefault();
