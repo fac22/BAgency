@@ -156,7 +156,7 @@ function textLengthChecker(field, max, display) {
   }
 }
 
-function imgHelper(a) {
+function addTeamImgHelper(a) {
   let help = 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
   return a.value === '' ? help : a.value;
 }
@@ -166,6 +166,7 @@ function addTeamGatherInfo() {
   const addTitle = teamAddTitle.value;
   const addDesc = teamAddDesc.value;
   const addImg = addTeamImgHelper(teamAddImg);
+  // const addImg = teamAddImg.value;
   return { addName, addTitle, addDesc, addImg };
 }
 
@@ -180,8 +181,9 @@ function addTeamFillTemplate() {
   tempClone.querySelector('h3').textContent = formInfo.addName;
   tempClone.querySelector('h4').textContent = formInfo.addTitle;
   tempClone.querySelector('p').textContent = formInfo.addDesc;
-  tempClone.querySelector('img').src =
-    'https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
+  // tempClone.querySelector('img').src =
+  //   'https://images.unsplash.com/photo-1552053831-71594a27632d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';
+  tempClone.querySelector('img').src = formInfo.addImg;
   return target.appendChild(tempClone);
 }
 
@@ -192,7 +194,10 @@ teamAddDesc.addEventListener('input', () => {
 teamAddSubmit.addEventListener('click', () => {
   passwordChecker(teamAddPass, adminPasswordBAgency, teamAddPassLabelError);
   // addTeamGatherInfo();
-  addTeamFillTemplate();
+  sendForm();
+  if (sendForm) {
+    addTeamFillTemplate();
+  }
 });
 
 // Button FIND OUT MORE
