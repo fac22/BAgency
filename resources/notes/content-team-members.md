@@ -51,3 +51,11 @@
 
 - [ ] Check real agency websites
   - fac guests (Apolitical, This is undefined)
+
+- **Intro**: BAgency is your partner in creating and launching a professional online presence for your business or social enterprise.
+### Developing a strategy
+-	We work with you to identify the needs of your customers and develop an online strategy to expand your reach
+### Building reliable products with a vision
+-	With our creative and technical expertise, we choose the perfect tools to create innovative and robust projects that are perfectly tailored to your design and functionality requirements
+### Launching the future
+-	We take great pride in developing software with accessibility and sustainability at its core that makes our clients lead the progress. 
