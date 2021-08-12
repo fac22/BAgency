@@ -24,11 +24,14 @@
             <a class="nav__link" href="#chapter-team">Our team</a>
           </li>
           <li class="nav__item">
+            <a class="nav__link" href="#chapter-member">Add member</a>
+          </li>
+          <li class="nav__item">
             <a
               class="nav__link nav__link--btn btn--open-modal"
               href="#chapter-contact"
             >
-              Work form
+              Work request
             </a>
           </li>
           <!-- <li class="nav__item"><a class="nav__link nav__link--btn btn--open-modal" href="#chapter-team-add">Add staff</a></li> -->
@@ -152,48 +155,54 @@
           </article>
         </template>
       </section>
-      <section>
-        <h1>We are always adding new members to our team</h2>
-        <img
-          src="img/new-team.jpg"
-          class="header__img"
-          alt="The BAgency team"
-          tabindex="0"
-        />
-        <form name="team-form" id="team-form" class="modal__form">
-          <label for="team-form-name">Name<span class="required"> *</span></label>
-          <input name="Staff Name" type="text" id="team-form-name" placeholder="Employee Name" data-valid="false" required>
-          <!-- <span>&nbsp;</span>
-          <span id="team-form-name-error" class="modal__form_error hidden">You need to provide a name</span> -->
+      <section class="section" id="chapter-member" tabindex="0">
+        <div class="section__title">
+          <h3 class="section__header">
+            We are always adding new members to our team
+          </h3>
+        </div>
+        <div class="member">
+          <img
+            src="img/new-team.jpg"
+            class="header__img"
+            alt="The BAgency team"
+            tabindex="0"
+          />
+          <form name="team-form" id="team-form" class="modal__form">
+            <label for="team-form-name">Name<span class="required"> *</span></label>
+            <input name="Staff Name" type="text" id="team-form-name" placeholder="Employee Name" data-valid="false" required>
+            <!-- <span>&nbsp;</span>
+            <span id="team-form-name-error" class="modal__form_error hidden">You need to provide a name</span> -->
 
-          <label for="team-form-email">Email Address<span class="required"> *</span></label>
-          <input name="Staff Email Adress" type="email" id="team-form-email" placeholder="Employee Email Address" data-valid="false" required>
-          <!-- <span>&nbsp;</span>
-          <span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid Email Address</span> -->
+            <label for="team-form-email">Email Address<span class="required"> *</span></label>
+            <input name="Staff Email Adress" type="email" id="team-form-email" placeholder="Employee Email Address" data-valid="false" required>
+            <!-- <span>&nbsp;</span>
+            <span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid Email Address</span> -->
 
-          <label for="team-form-title">Job Title<span class="required"> *</span></label>
-          <input name="Staff Title" type="text" id="team-form-title" placeholder="New Team Role Title" data-valid="false" required>
-          <!-- <span>&nbsp;</span>
-          <span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid the Role Title</span> -->
+            <label for="team-form-title">Job Title<span class="required"> *</span></label>
+            <input name="Staff Title" type="text" id="team-form-title" placeholder="New Team Role Title" data-valid="false" required>
+            <!-- <span>&nbsp;</span>
+            <span id="team-form-email-error" class="modal__form_error hidden">You need to provide a valid the Role Title</span> -->
 
-          <label for="team-form-desc">Description<span class="required"> *</span><span class="error"></span
-            ></label>
-          <textarea name="Staff Description" id="team-form-desc" placeholder="Describe the role of the new team member (max 149 characters)" data-valid="false" required></textarea>
-          <!-- <span>&nbsp;</span>
-          <span id="work-form-desc-error" class="modal__form_error hidden">You need to provide a message between 1 and 149 characters</span> -->
+            <label for="team-form-desc">Description<span class="required"> *</span><span class="error"></span
+              ></label>
+            <textarea name="Staff Description" id="team-form-desc" placeholder="Describe the role of the new team member (max 149 characters)" data-valid="false" required></textarea>
+            <!-- <span>&nbsp;</span>
+            <span id="work-form-desc-error" class="modal__form_error hidden">You need to provide a message between 1 and 149 characters</span> -->
 
-          <label for="team-form-img">Profile Image</label>
-          <input name="Staff Image" type="text" id="team-form-img" placeholder="Insert URL">
+            <label for="team-form-img">Profile Image</label>
+            <input name="Staff Image" type="text" id="team-form-img" placeholder="Insert URL">
 
-          <label for="team-form-pass">Admin Password<span class="required"> *</span><span class="error"></span
-            ></label>
-          <input name="Admin Password" type="password" id="team-form-pass" placeholder="Enter Admin Password" data-valid="false" required>
-          <!-- <span>&nbsp;</span>
-          <span id="work-form-pass-error" class="modal__form_error hidden">Incorrect Admin Password</span> -->
+            <label for="team-form-pass">Admin Password<span class="required"> *</span><span class="error"></span
+              ></label>
+            <input name="Admin Password" type="password" id="team-form-pass" placeholder="Enter Admin Password" data-valid="false" required>
+            <!-- <span>&nbsp;</span>
+            <span id="work-form-pass-error" class="modal__form_error hidden">Incorrect Admin Password</span> -->
 
-          <button id="team-form-submit" type="button" class="btn">Submit</button>
+            <button id="team-form-submit" type="button" class="btn">Submit</button>
 
-        </form>
+          </form>
+        </div>
       </section>
 
       <!--
@@ -227,7 +236,7 @@
         </li>
         <li class="footer__item">
           <a class="footer__link btn--open-modal" href="#chapter-contact"
-            >Work form</a
+            >Work request</a
           >
         </li>
       </ul>
@@ -236,7 +245,7 @@
 
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">Work form</h2>
+      <h2 class="modal__header">Work request</h2>
       <span id="work-form-results" class="hidden">&nbsp;</span>
       <form
         name="work-form"
