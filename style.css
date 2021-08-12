@@ -408,6 +408,11 @@ input:checked + .slider:before {
   background: none;
 }
 
+.team__form {
+  max-width: 100ch;
+  margin: 2vh auto;
+}
+
 .required, .error {
   color: red;
   /* vertical-align: super; */
