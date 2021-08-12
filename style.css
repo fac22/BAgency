@@ -6,7 +6,9 @@
   --color-background: #eefbfb;
   --color-nav: #ffffff;
   --color-accent: #398982;
-  --color-link: #398982; /*I don't know if we want to do 1 or 2 special font colors?*/
+  --color-link: #398982;
+  --color-modal: #ffffff;
+  --color-input: white;
 }
 
 .dark {
@@ -15,6 +17,10 @@
   --color-nav: #2a475e;
   --color-accent: #398982;
   --color-link: #eefbfb;
+  --color-modal: #2a475e;
+  --color-input: #d1e5f5;
+
+
   /*
   --color-lines-sections: ;
   */
@@ -168,6 +174,7 @@ body {
 h1 {
   font-size: 4rem;
   line-height: 1.35;
+  grid-row: third-line / 4;
 }
 
 h4 {
@@ -222,6 +229,13 @@ h4 {
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.member {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 12rem;
 }
 
 /*Not necessary anymore?*/
@@ -330,7 +344,7 @@ input:checked + .slider:before {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 60rem;
-  background-color: #ffffff;
+  background-color:var(--color-modal);
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -378,7 +392,7 @@ input:checked + .slider:before {
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
-  background-color: #ffffff;
+  background-color: var(--color-input);
 }
 
 .modal__form textarea {
@@ -386,7 +400,7 @@ input:checked + .slider:before {
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
-  background-color: #ffffff;
+  background-color: var(--color-input);
 
 }
 
