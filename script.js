@@ -201,11 +201,6 @@ teamAddSubmit.addEventListener('click', () => {
   }
 });
 
-// Button FIND OUT MORE
-btnFindOutMore.addEventListener('click', () => {
-  sectionAbout.scrollIntoView({ behavior: 'smooth' });
-});
-
 // Page navigation
 document.querySelector('.nav__links').addEventListener('click', (e) => {
   e.preventDefault();
