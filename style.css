@@ -203,8 +203,10 @@ h4 {
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   gap: 4rem;
-  margin: 0 12rem;
+  margin: 0 auto;
+  justify-items: center;
 }
 
 .about__img {
@@ -233,9 +235,14 @@ h4 {
 
 .member {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 4rem;
-  margin: 0 12rem;
+  margin: 0 auto;
+}
+#team-form {
+  margin: 0 auto;
+
 }
 
 /*Not necessary anymore?*/
@@ -422,6 +429,11 @@ input:checked + .slider:before {
   background: none;
 }
 
+.team__form {
+  max-width: 100ch;
+  margin: 2vh auto;
+}
+
 .required, .error {
   color: red;
   /* vertical-align: super; */
@@ -494,6 +506,9 @@ input:checked + .slider:before {
   .section {
     padding: 10rem 3rem;
   }
+  .about {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 
   .footer__link,
   .switch-container > * {
@@ -509,3 +524,4 @@ input:checked + .slider:before {
     padding: 6rem 2rem;
   }
 }
+
