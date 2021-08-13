@@ -483,8 +483,23 @@ input:invalid:required {
     padding-bottom: 1rem;
   }
 
+  .modal {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .modal__header {
     font-size: 7vw;
+  }
+
+  .modal__form {
+    row-gap: 0rem;
+  }
+
+  .modal__form label,
+  .modal__form input,
+  .modal__form textarea {
+    font-size: 1rem;
   }
 
   .btn--close-modal {
