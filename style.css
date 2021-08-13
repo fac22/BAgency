@@ -383,7 +383,7 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  gap: 1.5rem;
+  column-gap: 1.5rem;
 }
 
 .modal__form_error {
