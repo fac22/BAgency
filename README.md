@@ -14,7 +14,7 @@ It is hosted on https://fac22.github.io/BAgency/
 
 #### As a potential client, I want to:
 
-- [ ] See information about each member of your team so that I can know who you are (E1)
+- [x] See information about each member of your team so that I can know who you are (E1)
   - [x] Placeholder content: About us (BAgency), Our team (cat and dog)
 - [x] Browse your website on mobile, tablet, and desktop devices (E3)
 - [x] Click to navigate to different sections of your webpage (E1)
@@ -85,7 +85,7 @@ For more information and definitions of these terms, see our project management 
 
 - [x] Input the name, an image of, and description of the new team member (E1)
 - [x] Input an admin password and see if this has been accepted or rejected (E1)
-- [ ] Be notified if the email address doesn’t look right (E2)
+- [x] Be notified if the email address doesn’t look right (E2)
 - [x] Be notified if the description I’m writing is too long (E2)
 - [x] See the new member on the page once I click a button (E3)
 
@@ -100,7 +100,7 @@ User stories come with acceptance criteria - a detailed scope of a user’s requ
 
 - [x] Input boxes for name, email and description
 - [x] Input box for the admin password
-- [ ] Visible feedback when inputs are not valid
+- [x] Visible feedback when inputs are not valid
 - [x] A submit button
 - [x] A user cannot submit a form without filling out all of the mandatory fields (name, email address, request)
 - [x] Information from the form appears on the page after clicking submit

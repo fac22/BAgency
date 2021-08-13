@@ -138,8 +138,10 @@ function passwordChecker(field, correct, display) {
   const check = field.value === correct;
   if (!check) {
     display.textContent = ' Incorrect Password';
+    return false;
   } else {
     display.textContent = '';
+    return true;
   }
 }
 
@@ -149,11 +151,23 @@ function textLengthChecker(field, max, display) {
     let test = /Exceeds/.test(display.textContent);
     if (!test) {
       display.textContent = ' Exceeds 149 characters';
+      return false;
     }
   } else {
     field.setAttribute('aria-invalid', 'false');
     display.textContent = '';
+    return true;
   }
+}
+
+function allReqValid() {
+  //array = get all with required
+  const teamAddReq = Array.from(
+    document.querySelectorAll('#team-form [required]')
+  );
+  // console.log(teamAddReq);
+  return teamAddReq.every((x) => x.checkValidity());
+  // forEach(x.checkValidity())
 }
 
 function addTeamImgHelper(a) {
@@ -193,11 +207,24 @@ teamAddDesc.addEventListener('input', () => {
 });
 
 teamAddSubmit.addEventListener('click', () => {
-  passwordChecker(teamAddPass, adminPasswordBAgency, teamAddPassLabelError);
-  // addTeamGatherInfo();
-  sendForm();
-  if (sendForm) {
-    addTeamFillTemplate();
+  passwordChecker(
+    teamAddPass,
+    adminPasswordBAgency,
+    teamAddPassLabelError
+  );
+  if (
+    allReqValid() &&
+    passwordChecker(
+      teamAddPass,
+      adminPasswordBAgency,
+      teamAddPassLabelError
+    ) &&
+    textLengthChecker(teamAddDesc, 149, teamAddDescLabelError)
+  ) {
+    console.log('OK');
+    return addTeamFillTemplate();
+  } else {
+    console.log('Mistake');
   }
 });
 

@@ -240,10 +240,12 @@ h4 {
   gap: 4rem;
   margin: 0 auto;
 }
+
 #team-form {
   margin: 0 auto;
-
 }
+
+
 
 /*Not necessary anymore?*/
 .text--large {
@@ -438,6 +440,11 @@ input:checked + .slider:before {
   color: red;
   /* vertical-align: super; */
   font-style: italic;
+}
+
+input:invalid,
+input:invalid:required {
+  box-shadow: 0 0 5px 1px red;
 }
 
 .hidden {
