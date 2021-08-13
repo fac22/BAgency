@@ -187,7 +187,7 @@ function addTeamGatherInfo() {
 
 function addTeamFillTemplate() {
   //define target, template, clone
-  const target = document.querySelector('#chapter-team');
+  const target = document.querySelector('#staff');
   const template = document.querySelector('#new-team-card');
   const tempClone = template.content.cloneNode(true);
   //take object, access each key
